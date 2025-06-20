@@ -5,7 +5,7 @@ import {
 } from "@/types/github"
 
 const GITHUB_API_BASE = "https://api.github.com"
-// const GITHUB_API_BASE = process.env.GITHUB_API_BASE;
+// const GITHUB_API_BASE = process.env.NEXT_PUBLIC_GITHUB_API_BASE;
 
 export const searchUsers = async (query: string): Promise<GitHubUser[]> => {
   if (!query.trim()) return []
@@ -31,6 +31,21 @@ export const getUserRepositories = async (
 
   if (!response.ok) {
     throw new Error("Failed to fetch repositories")
+  }
+
+  return response.json()
+}
+
+export const getUserDetail = async (
+  username: string,
+  endPoint: string
+): Promise<GitHubRepository[]> => {
+  const response = await fetch(
+    `${GITHUB_API_BASE}/users/${username}/${endPoint}`
+  )
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch user detail")
   }
 
   return response.json()
