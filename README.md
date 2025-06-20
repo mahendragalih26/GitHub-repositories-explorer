@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## DEMO
+
+[Github repository Explorer](https://galih-github-explorer.vercel.app/)
+
 ## Getting Started
 
 install this package using yarn, npm or another pacakge manager
