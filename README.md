@@ -30,10 +30,11 @@ pnpm dev
 bun dev
 ```
 
-##About
+## About
+
 Our Project integrated with Open API by [Github.com](https://docs.github.com/en/rest?apiVersion=2022-11-28), look for github users and check their repos
 
-##API
+## API
 
 - API search Users
   [/search/users](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28#search-users)
@@ -44,7 +45,7 @@ Our Project integrated with Open API by [Github.com](https://docs.github.com/en/
 - API Get User Repo
   [/search/users](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user)
 
-##UNIT TEST (PLAYWRIGHT)
+## UNIT TEST (PLAYWRIGHT)
 
 The testing setup includes:
 
@@ -74,7 +75,7 @@ npx playwright test --ui
 npx playwright show-report
 ```
 
-##Project Link
+## Project Link
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
