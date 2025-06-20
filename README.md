@@ -44,6 +44,36 @@ Our Project integrated with Open API by [Github.com](https://docs.github.com/en/
 - API Get User Repo
   [/search/users](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user)
 
+##UNIT TEST (PLAYWRIGHT)
+
+The testing setup includes:
+
+- Playwright configuration with support for multiple browsers
+- Main functionality tests for searching users, viewing details, and navigation
+- Component-specific tests for UserCard and RepositoryCard
+- Test IDs added to components for reliable element selection
+- Example test to get you started
+
+To run the tests, use these commands:
+
+- Run all tests
+
+```bash
+npx playwright test
+```
+
+- Run tests in UI mode
+
+```bash
+npx playwright test --ui
+```
+
+- View test results
+
+```bash
+npx playwright show-report
+```
+
 ##Project Link
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

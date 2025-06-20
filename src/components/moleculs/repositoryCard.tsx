@@ -41,7 +41,10 @@ const RepositoryCard = ({ repository }: RepositoryCardProps) => {
   }
 
   return (
-    <Card className="h-full hover:shadow-md transition-shadow duration-200">
+    <Card
+      className="h-full hover:shadow-md transition-shadow duration-200"
+      data-testid="repository-card"
+    >
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <CardTitle className="text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors">

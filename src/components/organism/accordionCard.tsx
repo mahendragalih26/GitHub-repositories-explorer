@@ -46,6 +46,7 @@ const UserAccordionItem = ({
             <div
               className="flex items-center justify-between w-full"
               onClick={() => onClick(user)}
+              data-testid="user-card"
             >
               <UserCard key={user.id} user={user} />
             </div>
