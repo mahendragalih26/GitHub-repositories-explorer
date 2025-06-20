@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query"
 import { Card, CardContent } from "@/components/atoms/card"
 import { Separator } from "@/components/atoms/separator"
-import { Badge } from "@/components/atoms/badge"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/atoms/avatar"
+// import { Badge } from "@/components/atoms/badge"
+// import { Avatar, AvatarImage, AvatarFallback } from "@/components/atoms/avatar"
 import {
   AccordionContent,
   AccordionItem,
