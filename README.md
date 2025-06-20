@@ -2,6 +2,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+install this package using yarn, npm or another pacakge manager
+
+```bash
+npm install
+```
+
+if had an error when installing, please run using legacy peer deps
+
+```bash
+npm install --legacy-peer-deps
+```
+
 First, run the development server:
 
 ```bash
@@ -13,6 +25,22 @@ pnpm dev
 # or
 bun dev
 ```
+
+##About
+Our Project integrated with Open API by [Github.com](https://docs.github.com/en/rest?apiVersion=2022-11-28), look for github users and check their repos
+
+##API
+
+- API search Users
+  [/search/users](https://docs.github.com/en/rest/search/search?apiVersion=2022-11-28#search-users)
+
+- API Get Users
+  [/search/users](https://docs.github.com/en/rest/users/users?apiVersion=2022-11-28#get-a-user)
+
+- API Get User Repo
+  [/search/users](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user)
+
+##Project Link
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
