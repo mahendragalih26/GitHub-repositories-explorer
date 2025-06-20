@@ -3,21 +3,11 @@
 import { useState, useEffect, useCallback } from "react"
 import { useQuery } from "@tanstack/react-query"
 import { Input } from "@/components/atoms/input"
-import { Button } from "@/components/atoms/button"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/atoms/card"
+import { Card, CardContent } from "@/components/atoms/card"
 // import { Separator } from "@/components/atoms/separator"
-import { Badge } from "@/components/atoms/badge"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/atoms/avatar"
 import { searchUsers, getUserRepositories, getUser } from "@/services/githubApi"
 import { GitHubUser } from "@/types/github"
-import UserCard from "@/components/moleculs/userCard"
-import RepositoryCard from "@/components/moleculs/repositoryCard"
-import { Search, ArrowUp } from "lucide-react"
+import { Search } from "lucide-react"
 import { Accordion } from "@/components/atoms/accordion"
 import UserAccordionItem from "./accordionCard"
 
@@ -43,14 +33,14 @@ const GitHubSearch = () => {
   })
 
   // Get selected user details
-  const { data: userDetails } = useQuery({
+  const {} = useQuery({
     queryKey: ["userDetails", selectedUser?.login],
     queryFn: () => getUser(selectedUser!.login),
     enabled: !!selectedUser,
   })
 
   // Get repositories for selected user
-  const { data: repositories = [], isLoading: isLoadingRepos } = useQuery({
+  const {} = useQuery({
     queryKey: ["userRepositories", selectedUser?.login],
     queryFn: () => getUserRepositories(selectedUser!.login),
     enabled: !!selectedUser,
@@ -59,10 +49,6 @@ const GitHubSearch = () => {
   const handleUserClick = useCallback((user: GitHubUser) => {
     setSelectedUser(user)
   }, [])
-
-  const handleBackToSearch = () => {
-    setSelectedUser(null)
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
@@ -129,7 +115,7 @@ const GitHubSearch = () => {
           {searchQuery && !isSearching && users.length === 0 && (
             <div className="text-center py-8">
               <p className="text-gray-600">
-                No users found for "{searchQuery}"
+                No users found for &quot;{searchQuery}&quot;
               </p>
             </div>
           )}

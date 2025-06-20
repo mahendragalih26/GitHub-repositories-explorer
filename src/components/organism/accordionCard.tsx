@@ -8,10 +8,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/atoms/accordion"
-import { getUserRepositories, getUser } from "@/services/githubApi"
+// import { getUserRepositories, getUser } from "@/services/githubApi"
+import { getUserRepositories } from "@/services/githubApi"
 import { GitHubUser } from "@/types/github"
 import RepositoryCard from "../moleculs/repositoryCard"
-import { ChevronDown } from "lucide-react"
 import UserCard from "../moleculs/userCard"
 
 // Separate component for each user accordion item
@@ -29,11 +29,11 @@ const UserAccordionItem = ({
     enabled: false, // Will be enabled when accordion opens
   })
 
-  const { data: userDetails } = useQuery({
-    queryKey: ["userDetails", user.login],
-    queryFn: () => getUser(user.login),
-    enabled: false, // Will be enabled when accordion opens
-  })
+  // const { data: userDetails } = useQuery({
+  //   queryKey: ["userDetails", user.login],
+  //   queryFn: () => getUser(user.login),
+  //   enabled: false, // Will be enabled when accordion opens
+  // })
 
   return (
     <AccordionItem
